@@ -1,3 +1,53 @@
-<h1>Detail</h1>
+{% extends "base.html" %} {% block body %}
+<section class="probootstrap-slider flexslider2 page-inner">
+    <div class="overlay"></div>
+    <div class="probootstrap-wrap-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
 
-{{property_detail}}
+                    <div class="page-title probootstrap-animate">
+                        <div class="probootstrap-breadcrumbs">
+                            <a href="#">Home</a><span>About</span>
+                        </div>
+                        <h1>About Us</h1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="slides">
+        <li style="background-image: url(img/slider_1.jpg);"></li>
+        <li style="background-image: url(img/slider_4.jpg);"></li>
+        <li style="background-image: url(img/slider_2.jpg);"></li>
+    </ul>
+</section>
+<!-- END: slider  -->
+
+<section class="probootstrap-section">
+    <div class="container">
+        <div class="row heading">
+            <div class="col-md-12">
+                <h2 class="mt0 mb50 text-center">{{property_detail}}</h2>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="probootstrap-card-media">
+                <img src="{{ property_detail.image.url }}" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+                <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Details</h2>
+                <p>Type : {{property_detail.property_type}}</p>
+                <p>Area : {{property_detail.Area}}</p>
+                <p>beds : {{property_detail.beds_number}}</p>
+                <p>baths : {{property_detail.baths_number}}</p>
+                <p>garages : {{property_detail.garages_number}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
